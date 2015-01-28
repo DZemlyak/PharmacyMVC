@@ -1,0 +1,68 @@
+﻿@model Pharmacy.WEB.Core.ViewModels.OrderDetailedViewModel
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <div>
+    <hr/>
+        <dl class="dl-horizontal pull-left">
+            <dt>
+                @Html.DisplayNameFor(model => model.PharmacyNumber)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.PharmacyNumber)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Type)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Type)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.OrderDate)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.OrderDate)
+            </dd>
+        </dl>
+
+        <table class="table">
+            <tr>
+                <th>Medcine</th>
+                <th>Count</th>
+                <th>Unit Price</th>
+            </tr>
+            @foreach (var item in Model.OrderDetails){
+                <tr>
+                    <td>@item.Medcine.Name</td>
+                    <td>@item.Count</td>
+                    <td>@item.UnitPrice</td>
+                </tr>
+            }
+
+        </table>
+
+
+</div>
+<div class="clearfix"></div>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

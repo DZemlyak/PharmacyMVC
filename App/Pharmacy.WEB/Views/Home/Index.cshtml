@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "Pharmacy App";
+}
+
+<div class="jumbotron" style="background: #2a3542; color: white;">
+    <h1>@ViewBag.Title</h1>
+    <div class="panel-body btn-group">
+        @Html.RouteLink("Pharmacies", "Pharmacies", null, new { @class = "btn btn-lg btn-danger" })
+        @Html.RouteLink("Medcines", "Medcines", null, new { @class = "btn btn-lg btn-success" })
+        @Html.RouteLink("Orders", "Orders", null, new { @class = "btn btn-lg btn-primary" })
+        @Html.RouteLink("Storage", "Storage", null, new { @class = "btn btn-lg btn-warning" })
+    </div>
+</div>

@@ -1,0 +1,65 @@
+﻿@using GridMvc.Html
+@model Pharmacy.WEB.Core.ViewModels.OrderDetailedViewModel
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <hr/>
+    <dl class="dl-horizontal pull-left">
+        <dt>
+            @Html.DisplayNameFor(model => model.PharmacyNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PharmacyNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrderDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrderDate)
+        </dd>
+    </dl>
+    <div class="clearfix"></div>
+    <div>
+        @Html.Grid(Model.OrderDetails).Columns(col =>
+        {
+            col.Add(t => t.Medcine.Name)
+                .Titled("Medcine Name");
+            col.Add(t => t.Count);
+            col.Add(t => t.UnitPrice)
+                .Titled("Price");
+            col.Add().Encoded(false).Sanitized(false).SetWidth(20)
+                .RenderValueAs(t => @Html.RouteLink("Edit", "OrderDetailsEdit",
+                    new {orderId = Model.Id, medcineId = t.MedcineId}));
+            col.Add().Encoded(false).Sanitized(false).SetWidth(20)
+                .RenderValueAs(t => @Html.RouteLink("Delete", "OrderDetailsDelete",
+                    new {orderId = Model.Id, medcineId = t.MedcineId}));
+        }).WithPaging(10).Sortable()
+    </div>
+</div>
+
+<div class="clearfix"></div>
+<br/>
+<p>
+    @Html.RouteLink("Add to order", "OrderDetailsCreate", new { orderId = Model.Id })
+</p>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,42 @@
+﻿@using GridMvc.Html
+@model IEnumerable<Pharmacy.WEB.Core.ViewModels.StorageViewModel>
+
+@{
+    ViewBag.Title = "Storage";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var mod = Model.GroupBy(t => t.PharmacyNumber);
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<hr/>
+@Html.Grid(mod).Columns(col =>
+{
+    col.Add(t => t.Key)
+        .Titled("Pharmacy Number");
+    col.Add()
+        .Titled("Medcine")
+        .Encoded(false)
+        .Sanitized(false)
+        .RenderValueAs(q => @Html.Grid(q).Columns(c =>
+        {
+            c.Add(t => t.MedcineName)
+                .Titled("Name");
+            c.Add(t => t.Count);
+            
+            c.Add().Encoded(false).Sanitized(false).SetWidth(20)
+                .RenderValueAs(t => @Html.ActionLink("Edit", "Edit", new {
+                    pharmacyId = t.PharmacyId,
+                    medcineId = t.MedcineId
+                }));
+            c.Add().Encoded(false).Sanitized(false).SetWidth(20)
+                .RenderValueAs(t => @Html.ActionLink("Delete", "Delete", new {
+                    pharmacyId = t.PharmacyId,
+                    medcineId = t.MedcineId
+                }));
+        }).Sortable().Selectable(false));
+}).WithPaging(10).Sortable().Selectable(false)

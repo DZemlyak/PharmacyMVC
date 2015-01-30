@@ -20,3 +20,4 @@ E:\Учеба\NixSolutions\PharmacyApp\Pharmacy\App\Pharmacy.Contracts\bin\Debug
 E:\Учеба\NixSolutions\PharmacyApp\Pharmacy\App\Pharmacy.Contracts\bin\Debug\Pharmacy.Contracts.pdb
 E:\Учеба\NixSolutions\PharmacyApp\Pharmacy\App\Pharmacy.Contracts\obj\Debug\Pharmacy.Contracts.dll
 E:\Учеба\NixSolutions\PharmacyApp\Pharmacy\App\Pharmacy.Contracts\obj\Debug\Pharmacy.Contracts.pdb
+E:\Учеба\NixSolutions\PharmacyApp\Pharmacy\App\Pharmacy.Contracts\obj\Debug\Pharmacy.Contracts.csprojResolveAssemblyReference.cache

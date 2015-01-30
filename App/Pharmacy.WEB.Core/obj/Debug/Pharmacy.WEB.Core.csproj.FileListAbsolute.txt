@@ -6,6 +6,7 @@ E:\Учеба\NixSolutions\PharmacyApp\Pharmacy\App\Pharmacy.WEB.Core\bin\Debug\
 E:\Учеба\NixSolutions\PharmacyApp\Pharmacy\App\Pharmacy.WEB.Core\bin\Debug\FluentValidation.Mvc.dll
 E:\Учеба\NixSolutions\PharmacyApp\Pharmacy\App\Pharmacy.WEB.Core\bin\Debug\Pharmacy.Contracts.dll
 E:\Учеба\NixSolutions\PharmacyApp\Pharmacy\App\Pharmacy.WEB.Core\bin\Debug\Pharmacy.Core.dll
+E:\Учеба\NixSolutions\PharmacyApp\Pharmacy\App\Pharmacy.WEB.Core\bin\Debug\System.Web.Mvc.dll
 E:\Учеба\NixSolutions\PharmacyApp\Pharmacy\App\Pharmacy.WEB.Core\bin\Debug\Newtonsoft.Json.dll
 E:\Учеба\NixSolutions\PharmacyApp\Pharmacy\App\Pharmacy.WEB.Core\bin\Debug\Pharmacy.Contracts.pdb
 E:\Учеба\NixSolutions\PharmacyApp\Pharmacy\App\Pharmacy.WEB.Core\bin\Debug\Pharmacy.Core.pdb
@@ -14,6 +15,7 @@ E:\Учеба\NixSolutions\PharmacyApp\Pharmacy\App\Pharmacy.WEB.Core\bin\Debug\
 E:\Учеба\NixSolutions\PharmacyApp\Pharmacy\App\Pharmacy.WEB.Core\bin\Debug\FluentValidation.xml
 E:\Учеба\NixSolutions\PharmacyApp\Pharmacy\App\Pharmacy.WEB.Core\bin\Debug\FluentValidation.Mvc.pdb
 E:\Учеба\NixSolutions\PharmacyApp\Pharmacy\App\Pharmacy.WEB.Core\bin\Debug\FluentValidation.Mvc.xml
+E:\Учеба\NixSolutions\PharmacyApp\Pharmacy\App\Pharmacy.WEB.Core\bin\Debug\System.Web.Mvc.xml
 E:\Учеба\NixSolutions\PharmacyApp\Pharmacy\App\Pharmacy.WEB.Core\bin\Debug\de\FluentValidation.resources.dll
 E:\Учеба\NixSolutions\PharmacyApp\Pharmacy\App\Pharmacy.WEB.Core\bin\Debug\es\FluentValidation.resources.dll
 E:\Учеба\NixSolutions\PharmacyApp\Pharmacy\App\Pharmacy.WEB.Core\bin\Debug\fr\FluentValidation.resources.dll
@@ -28,5 +30,3 @@ E:\Учеба\NixSolutions\PharmacyApp\Pharmacy\App\Pharmacy.WEB.Core\bin\Debug\
 E:\Учеба\NixSolutions\PharmacyApp\Pharmacy\App\Pharmacy.WEB.Core\obj\Debug\Pharmacy.WEB.Core.csprojResolveAssemblyReference.cache
 E:\Учеба\NixSolutions\PharmacyApp\Pharmacy\App\Pharmacy.WEB.Core\obj\Debug\Pharmacy.WEB.Core.dll
 E:\Учеба\NixSolutions\PharmacyApp\Pharmacy\App\Pharmacy.WEB.Core\obj\Debug\Pharmacy.WEB.Core.pdb
-E:\Учеба\NixSolutions\PharmacyApp\Pharmacy\App\Pharmacy.WEB.Core\bin\Debug\System.Web.Mvc.dll
-E:\Учеба\NixSolutions\PharmacyApp\Pharmacy\App\Pharmacy.WEB.Core\bin\Debug\System.Web.Mvc.xml

@@ -6,6 +6,7 @@ using Pharmacy.WEB.Core.ViewModels;
 
 namespace Pharmacy.WEB.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class PharmacyController : Controller
     {
         private readonly IManager<Pharmacy.Core.Pharmacy> _manager;

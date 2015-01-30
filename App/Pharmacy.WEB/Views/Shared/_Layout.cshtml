@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using Pharmacy.WEB.Core.Helpers
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -14,14 +15,15 @@
     <section id="container">
         <header class="header white-bg">
             @Html.ActionLink("Pharmacy Application", "Index", "Home", null, new { @class = "logo" })
+            @Html.Partial("_LoginPartial")
         </header>
         <aside>
             <div id="sidebar" class="nav-collapse" style="overflow: hidden; outline: none;">
                 <ul class="sidebar-menu">
-                    <li>@Html.ActionLink("Pharmacies", "Index", "Pharmacy")</li>
-                    <li>@Html.ActionLink("Medcines", "Index", "Medcine")</li>
-                    <li>@Html.ActionLink("Orders", "Index", "Order")</li>
-                    <li>@Html.ActionLink("Storage", "Index", "Storage")</li>
+                    <li class="@Html.IsSelected("Pharmacy")">@Html.ActionLink("Pharmacies", "Index", "Pharmacy")</li>
+                    <li class="@Html.IsSelected("Medcine")">@Html.ActionLink("Medcines", "Index", "Medcine")</li>
+                    <li class="@Html.IsSelected("Order")">@Html.ActionLink("Orders", "Index", "Order")</li>
+                    <li class="@Html.IsSelected("Storage")">@Html.ActionLink("Storage", "Index", "Storage")</li>
                 </ul>
             </div>
             <div id="main-content" style="margin-left: 180px;">

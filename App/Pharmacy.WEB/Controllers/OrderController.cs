@@ -9,6 +9,7 @@ using Pharmacy.WEB.Core.ViewModels;
 
 namespace Pharmacy.WEB.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class OrderController : Controller
     {
         private readonly IManager<Order> _manager;

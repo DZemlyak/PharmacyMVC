@@ -11,6 +11,7 @@ using Pharmacy.WEB.Core.ViewModels;
 
 namespace Pharmacy.WEB.Controllers
 {
+    [Authorize(Roles = "Admin, User")]
     public class StorageController : Controller
     {
         private readonly IManager<Storage> _storageManager;
@@ -29,6 +30,7 @@ namespace Pharmacy.WEB.Controllers
         }
 
         // GET: Storage/Create
+        [Authorize(Roles = "Admin")]
         public ActionResult Create()
         {
             var model = _storageModelCreator.GetCreateModel();
@@ -38,6 +40,7 @@ namespace Pharmacy.WEB.Controllers
         // POST: Storage/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public ActionResult Create(StorageEditViewModel storageCreationViewModel)
         {
             try {
@@ -51,6 +54,7 @@ namespace Pharmacy.WEB.Controllers
         }
 
         // GET: Storage/Edit/5
+        [Authorize(Roles = "Admin")]
         public ActionResult Edit(int pharmacyId, int medcineId)
         {
             var entity = _storageManager.GetByPrimaryKey(medcineId, pharmacyId);
@@ -60,6 +64,7 @@ namespace Pharmacy.WEB.Controllers
         // POST: Storage/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public ActionResult Edit(int pharmacyId, int medcineId, StorageEditViewModel storageCreationViewModel)
         {
             try
@@ -79,6 +84,7 @@ namespace Pharmacy.WEB.Controllers
         }
 
         // GET: Storage/Delete/5
+        [Authorize(Roles = "Admin")]
         public ActionResult Delete(int pharmacyId, int medcineId)
         {
             var model = Mapper.Map<Storage, StorageViewModel>(
@@ -89,6 +95,7 @@ namespace Pharmacy.WEB.Controllers
         // POST: Storage/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public ActionResult Delete(int pharmacyId, int medcineId, FormCollection formCollection)
         {
             try
